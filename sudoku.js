@@ -21,8 +21,19 @@ function solve(boardString) {
   return boardArray;
 }
 
-function isSolved(board) {}
-function prettyBoard(board) {}
+function isSolved(board) {
+  for (let row = 0; row < board.length; row += 1) {
+    for (let col = 0; col < board.length; col += 1) {
+      if (board[row][col] === '-') {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+function prettyBoard(board) {
+  console.table(board);
+}
 
 // Экспортировать функции для использования в другом файле (например, readAndSolve.js).
 module.exports = {
