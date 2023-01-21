@@ -10,8 +10,16 @@ function solve(boardString) {}
  * Принимает игровое поле в том формате, в котором его вернули из функции solve.
  * Возвращает булевое значение — решено это игровое поле или нет.
  */
-function isSolved(board) {}
-
+function isSolved(board) {
+  for (let row = 0; row < board.length; row += 1) {
+    for (let col = 0; col < board.length; col += 1) {
+      if (board[row][col] === '-') {
+        return false;
+      }
+    }
+  }
+  return true;
+}
 /**
  * Принимает игровое поле в том формате, в котором его вернули из функции solve.
  * Возвращает строку с игровым полем для последующего вывода в консоль.
