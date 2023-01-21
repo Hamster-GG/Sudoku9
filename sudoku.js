@@ -14,7 +14,7 @@ function solve(boardString) {
   for (let row = 0; row < boardArray.length; row += 1) {
     for (let col = 0; col < boardArray.length; col += 1) {
       if (boardArray[row][col] === "-") {
-        boardArray[row][col] = ":пчела:";
+        boardArray[row][col] = "🐝";
       }
     }
   }
